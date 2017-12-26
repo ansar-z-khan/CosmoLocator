@@ -7,14 +7,19 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		200FC5011FEEE65B00999C35 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 200FC5001FEEE65B00999C35 /* GoogleService-Info.plist */; };
+		2060352E1FEF0BDC005B7E28 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2060352D1FEF0BDC005B7E28 /* AdSupport.framework */; };
 		2098E85C1FEED8B200EE2B6B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2098E85B1FEED8B200EE2B6B /* AppDelegate.swift */; };
 		2098E85E1FEED8B200EE2B6B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2098E85D1FEED8B200EE2B6B /* ViewController.swift */; };
 		2098E8611FEED8B200EE2B6B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2098E85F1FEED8B200EE2B6B /* Main.storyboard */; };
 		2098E8631FEED8B200EE2B6B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2098E8621FEED8B200EE2B6B /* Assets.xcassets */; };
 		2098E8661FEED8B200EE2B6B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2098E8641FEED8B200EE2B6B /* LaunchScreen.storyboard */; };
+		F58C8FA2960DF2DB5751834C /* Pods_CosmoLocator.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7EDF674A4407D34351153F61 /* Pods_CosmoLocator.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		200FC5001FEEE65B00999C35 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		2060352D1FEF0BDC005B7E28 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
 		2098E8581FEED8B200EE2B6B /* CosmoLocator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CosmoLocator.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2098E85B1FEED8B200EE2B6B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2098E85D1FEED8B200EE2B6B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +27,9 @@
 		2098E8621FEED8B200EE2B6B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2098E8651FEED8B200EE2B6B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		2098E8671FEED8B200EE2B6B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7EDF674A4407D34351153F61 /* Pods_CosmoLocator.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CosmoLocator.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		B3B38FEDEB305C32B954FFC0 /* Pods-CosmoLocator.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CosmoLocator.release.xcconfig"; path = "Pods/Target Support Files/Pods-CosmoLocator/Pods-CosmoLocator.release.xcconfig"; sourceTree = "<group>"; };
+		DDA3A06EBE201B589EBCD394 /* Pods-CosmoLocator.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CosmoLocator.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CosmoLocator/Pods-CosmoLocator.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,6 +37,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2060352E1FEF0BDC005B7E28 /* AdSupport.framework in Frameworks */,
+				F58C8FA2960DF2DB5751834C /* Pods_CosmoLocator.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -40,6 +50,8 @@
 			children = (
 				2098E85A1FEED8B200EE2B6B /* CosmoLocator */,
 				2098E8591FEED8B200EE2B6B /* Products */,
+				8228886A8542A28867126FC9 /* Pods */,
+				D5C0A3447A4CB8D267CE5756 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,6 +66,7 @@
 		2098E85A1FEED8B200EE2B6B /* CosmoLocator */ = {
 			isa = PBXGroup;
 			children = (
+				200FC5001FEEE65B00999C35 /* GoogleService-Info.plist */,
 				2098E85B1FEED8B200EE2B6B /* AppDelegate.swift */,
 				2098E85D1FEED8B200EE2B6B /* ViewController.swift */,
 				2098E85F1FEED8B200EE2B6B /* Main.storyboard */,
@@ -64,6 +77,24 @@
 			path = CosmoLocator;
 			sourceTree = "<group>";
 		};
+		8228886A8542A28867126FC9 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DDA3A06EBE201B589EBCD394 /* Pods-CosmoLocator.debug.xcconfig */,
+				B3B38FEDEB305C32B954FFC0 /* Pods-CosmoLocator.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		D5C0A3447A4CB8D267CE5756 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				2060352D1FEF0BDC005B7E28 /* AdSupport.framework */,
+				7EDF674A4407D34351153F61 /* Pods_CosmoLocator.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -71,9 +102,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2098E86A1FEED8B200EE2B6B /* Build configuration list for PBXNativeTarget "CosmoLocator" */;
 			buildPhases = (
+				FF26A0D351635770A5FAA6FB /* [CP] Check Pods Manifest.lock */,
 				2098E8541FEED8B200EE2B6B /* Sources */,
 				2098E8551FEED8B200EE2B6B /* Frameworks */,
 				2098E8561FEED8B200EE2B6B /* Resources */,
+				B935DE510F138A92979AF2EE /* [CP] Embed Pods Frameworks */,
+				BC7E0E95D00272D43DA08BF5 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -124,12 +158,61 @@
 			buildActionMask = 2147483647;
 			files = (
 				2098E8661FEED8B200EE2B6B /* LaunchScreen.storyboard in Resources */,
+				200FC5011FEEE65B00999C35 /* GoogleService-Info.plist in Resources */,
 				2098E8631FEED8B200EE2B6B /* Assets.xcassets in Resources */,
 				2098E8611FEED8B200EE2B6B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		B935DE510F138A92979AF2EE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CosmoLocator/Pods-CosmoLocator-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BC7E0E95D00272D43DA08BF5 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CosmoLocator/Pods-CosmoLocator-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FF26A0D351635770A5FAA6FB /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		2098E8541FEED8B200EE2B6B /* Sources */ = {
@@ -272,6 +355,7 @@
 		};
 		2098E86B1FEED8B200EE2B6B /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = DDA3A06EBE201B589EBCD394 /* Pods-CosmoLocator.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -287,6 +371,7 @@
 		};
 		2098E86C1FEED8B200EE2B6B /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = B3B38FEDEB305C32B954FFC0 /* Pods-CosmoLocator.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
