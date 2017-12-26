@@ -27,7 +27,7 @@
                                 </connections>
                             </imageView>
                             <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="biA-bR-qry">
-                                <rect key="frame" x="104" y="525" width="166" height="2"/>
+                                <rect key="frame" x="106" y="519" width="163" height="2"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </progressView>
                         </subviews>
@@ -36,6 +36,7 @@
                     </view>
                     <connections>
                         <outlet property="photoPicker" destination="Zcv-nx-iQb" id="uw0-Pn-yPR"/>
+                        <outlet property="progressBar" destination="biA-bR-qry" id="wOO-Mg-kCY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>

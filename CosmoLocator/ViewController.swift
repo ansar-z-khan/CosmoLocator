@@ -19,7 +19,9 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
     private let scopes = [kGTLRAuthScopeDriveReadonly]
     
     @IBOutlet weak var photoPicker: UIImageView!
-    @IBOutlet var photoPickerTap: UITapGestureRecognizer!
+    
+    @IBOutlet weak var progressBar: UIProgressView!
+    
     private let service = GTLRDriveService()
     let signInButton = GIDSignInButton()
     let output = UITextView()
@@ -56,6 +58,8 @@ class ViewController: UIViewController, UIImagePickerControllerDelegate, UINavig
         
         // Add a UITextView to display output.
         photoPicker.isHidden = true;
+        progressBar.isHidden = true;
+
         output.frame = view.bounds
         output.isEditable = false
         output.contentInset = UIEdgeInsets(top: 20, left: 0, bottom: 20, right: 0)
@@ -142,6 +146,7 @@ extension ViewController: GIDSignInDelegate {
     }
     func uploadToFirebase(data: Data) {
         var fileName = "";
+        progressBar.isHidden = false;
         if(googleUser != nil){
             if(googleUser?.profile != nil){
                 if(googleUser?.profile.givenName != nil){
@@ -161,7 +166,47 @@ extension ViewController: GIDSignInDelegate {
             } else {
                 // Metadata contains file metadata such as size, content-type, and download URL.
                 let downloadURL = metadata!.downloadURL()
+
+            }
+        }
+        //Called when progress is updated
+        uploadTask.observe(.progress) { snapshot in
+            // Upload reported progress
+            let percentComplete = 100.0 * Double(snapshot.progress!.completedUnitCount)
+                / Double(snapshot.progress!.totalUnitCount)
+            self.progressBar.progress = Float(percentComplete)
+        }
+        //Called when sucessfully uploadesd
+        uploadTask.observe(.success) { snapshot in
                 self.showAlert(title: "Success", message: "Uploaded " + fileName + " to server")
+                self.progressBar.isHidden = true;
+        }
+        
+        uploadTask.observe(.failure) { snapshot in
+            if let error = snapshot.error as? NSError {
+                switch (FIRStorageErrorCode(rawValue: error.code)!) {
+                case .objectNotFound:
+                    self.showAlert(title: "Failure", message: "File not found")
+                    break
+                case .unauthorized:
+                    self.showAlert(title: "Failure", message: "Unauthorized to upload file")
+                    // User doesn't have permission to access file
+                    break
+                case .cancelled:
+                    self.showAlert(title: "Failure", message: "User Cancelled")
+                    // User canceled the upload
+                    break
+                    
+                    /* ... */
+                    
+                case .unknown:
+                    // Unknown error occurred, inspect the server response
+                    break
+                default:
+                    // A separate error occurred. This is a good place to retry the upload.
+                    self.uploadToFirebase(data: data)
+                    break
+                }
             }
         }
         
