@@ -26,6 +26,10 @@
                                     <outletCollection property="gestureRecognizers" destination="Te1-dr-qPd" appends="YES" id="h9Z-vg-dEF"/>
                                 </connections>
                             </imageView>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" fixedFrame="YES" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="biA-bR-qry">
+                                <rect key="frame" x="104" y="525" width="166" height="2"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </progressView>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
@@ -41,7 +45,7 @@
                     </connections>
                 </tapGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="24.800000000000001" y="31.934032983508249"/>
+            <point key="canvasLocation" x="-852" y="-34.632683658170919"/>
         </scene>
     </scenes>
     <resources>
